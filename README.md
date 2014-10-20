@@ -112,5 +112,3 @@ CodeGenerator
 
 	public boolean isBLOB() 是否有 BLOB、CLOB、LONGVARCHAR、LONGVARBINARY或VARBINARY
 
-##作者
-ptma@163.com
