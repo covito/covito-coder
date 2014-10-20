@@ -1,169 +1,33 @@
 <assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
 	<id>release</id>
-	<formats>zip</formats>
-	<includeBaseDirectory />
-	<baseDirectory />
-	<includeSiteDirectory />
-	<containerDescriptorHandlers>
-		<containerDescriptorHandler>
-			<handlerName />
-			<configuration />
-		</containerDescriptorHandler>
-	</containerDescriptorHandlers>
-	<moduleSets>
-		<moduleSet>
-			<useAllReactorProjects />
-			<includeSubModules />
-			<includes />
-			<excludes />
-			<sources>
-				<useDefaultExcludes />
-				<outputDirectory />
-				<includes />
-				<excludes />
-				<fileMode />
-				<directoryMode />
-				<fileSets>
-					<fileSet>
-						<useDefaultExcludes />
-						<outputDirectory />
-						<includes />
-						<excludes />
-						<fileMode />
-						<directoryMode />
-						<directory />
-						<lineEnding />
-						<filtered />
-					</fileSet>
-				</fileSets>
-				<includeModuleDirectory />
-				<excludeSubModuleDirectories />
-				<outputDirectoryMapping />
-			</sources>
-			<binaries>
-				<outputDirectory />
-				<includes />
-				<excludes />
-				<fileMode />
-				<directoryMode />
-				<attachmentClassifier />
-				<includeDependencies />
-				<dependencySets>
-					<dependencySet>
-						<outputDirectory />
-						<includes />
-						<excludes />
-						<fileMode />
-						<directoryMode />
-						<useStrictFiltering />
-						<outputFileNameMapping />
-						<unpack />
-						<unpackOptions>
-							<includes />
-							<excludes />
-							<filtered />
-							<lineEnding />
-							<useDefaultExcludes />
-						</unpackOptions>
-						<scope />
-						<useProjectArtifact />
-						<useProjectAttachments />
-						<useTransitiveDependencies />
-						<useTransitiveFiltering />
-					</dependencySet>
-				</dependencySets>
-				<unpack />
-				<unpackOptions>
-					<includes />
-					<excludes />
-					<filtered />
-					<lineEnding />
-					<useDefaultExcludes />
-				</unpackOptions>
-				<outputFileNameMapping />
-			</binaries>
-		</moduleSet>
-	</moduleSets>
+	<formats>
+		<format>zip</format>
+	</formats>
 	<fileSets>
 		<fileSet>
-			<useDefaultExcludes />
-			<outputDirectory>/</outputDirectory>
-			<includes>
-				<include>*</include>
-			</includes>
-			<excludes />
-			<fileMode />
-			<directoryMode />
+			<outputDirectory>templates</outputDirectory>
 			<directory>${basedir}/templates</directory>
-			<lineEnding />
-			<filtered />
 		</fileSet>
 		<fileSet>
-			<useDefaultExcludes />
 			<outputDirectory>/</outputDirectory>
 			<includes>
-				<include>*</include>
+				<include>start.bat</include>
 			</includes>
-			<excludes />
-			<fileMode />
-			<directoryMode />
+			<directory>${basedir}</directory>
+		</fileSet>
+		<fileSet>
+			<outputDirectory>lib</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+			</includes>
 			<directory>${basedir}/lib</directory>
-			<lineEnding />
-			<filtered />
 		</fileSet>
 	</fileSets>
-	<files>
-		<file>
-			<source />
-			<outputDirectory />
-			<destName />
-			<fileMode />
-			<lineEnding />
-			<filtered />
-		</file>
-	</files>
 	<dependencySets>
 		<dependencySet>
 			<outputDirectory>lib</outputDirectory>
-			<includes />
-			<excludes />
-			<fileMode />
-			<directoryMode />
-			<useStrictFiltering />
-			<outputFileNameMapping />
-			<unpack />
-			<unpackOptions>
-				<includes />
-				<excludes />
-				<filtered />
-				<lineEnding />
-				<useDefaultExcludes />
-			</unpackOptions>
-			<scope />
 			<useProjectArtifact>true</useProjectArtifact>
-			<useProjectAttachments />
-			<useTransitiveDependencies />
-			<useTransitiveFiltering />
 		</dependencySet>
 	</dependencySets>
-	<repositories>
-		<repository>
-			<outputDirectory />
-			<includes />
-			<excludes />
-			<fileMode />
-			<directoryMode />
-			<includeMetadata />
-			<groupVersionAlignments>
-				<groupVersionAlignment>
-					<id />
-					<version />
-					<excludes />
-				</groupVersionAlignment>
-			</groupVersionAlignments>
-			<scope />
-		</repository>
-	</repositories>
-	<componentDescriptors />
 </assembly>
