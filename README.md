@@ -1,4 +1,4 @@
-CodeGenerator
+Covito-coder
 ====
 这是一个使用 Freemarker 和 Velocity 模板来生代码的工具。
 
@@ -112,5 +112,3 @@ CodeGenerator
 
 	public boolean isBLOB() 是否有 BLOB、CLOB、LONGVARCHAR、LONGVARBINARY或VARBINARY
 
-##作者
-ptma@163.com
