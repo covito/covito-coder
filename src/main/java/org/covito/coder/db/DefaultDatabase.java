@@ -52,7 +52,7 @@ public class DefaultDatabase extends Database {
                 Column column = table.getColumn(columnName);
                 if (column == null) {
                     column = new Column(columnName);
-                    table.addPrimaryKeyColumn(column);
+                    table.addPrimaryKey(column);
                 }
                 column.setPrimaryKey(true);
             }
