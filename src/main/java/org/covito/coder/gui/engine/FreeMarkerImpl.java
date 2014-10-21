@@ -19,17 +19,14 @@ public class FreeMarkerImpl implements TemplateEngine {
 
     private Configuration config;
 
-    private String classPath;
-
-    public FreeMarkerImpl(String classPath){
-        this.classPath = classPath;
+    public FreeMarkerImpl(){
         initConfiguration();
     }
 
     public void initConfiguration() {
         try {
             config = new Configuration();
-            config.setDirectoryForTemplateLoading(new File(classPath + "templates/freemarker"));
+            config.setDirectoryForTemplateLoading(new File("templates/freemarker"));
             config.setObjectWrapper(new DefaultObjectWrapper());
 
             config.setSetting("classic_compatible", "true");

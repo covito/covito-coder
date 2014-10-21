@@ -17,17 +17,43 @@
 			<directory>${basedir}</directory>
 		</fileSet>
 		<fileSet>
-			<outputDirectory>lib</outputDirectory>
+			<outputDirectory>driver</outputDirectory>
 			<includes>
 				<include>*.jar</include>
 			</includes>
-			<directory>${basedir}/lib</directory>
+			<directory>${basedir}/driver</directory>
+		</fileSet>
+		<fileSet>
+			<outputDirectory>config</outputDirectory>
+			<directory>${basedir}/config</directory>
 		</fileSet>
 	</fileSets>
 	<dependencySets>
 		<dependencySet>
+			<outputDirectory>driver</outputDirectory>
+			<useProjectArtifact>false</useProjectArtifact>
+			<includes>
+				<include>mysql*</include>
+				<include>postgresql*</include>
+			</includes>
+		</dependencySet>
+		<dependencySet>
 			<outputDirectory>lib</outputDirectory>
+			<useProjectArtifact>false</useProjectArtifact>
+			<excludes>
+				<exclude>mysql*</exclude>
+				<exclude>postgresql*</exclude>
+			</excludes>
+		</dependencySet>
+		<dependencySet>
+			<outputDirectory>/</outputDirectory>
 			<useProjectArtifact>true</useProjectArtifact>
+			<outputFileNameMapping>
+				${artifact.artifactId}.${artifact.extension}
+			</outputFileNameMapping>
+			<includes>
+				<include>covito-code*</include>
+			</includes>
 		</dependencySet>
 	</dependencySets>
 </assembly>

@@ -2,7 +2,6 @@ package org.covito.coder.config;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -29,8 +28,8 @@ import org.xml.sax.SAXException;
 
 public class Configuration {
 
-    private static final String   CONFIGURATION_FILE = "/configuration.xml";
-    private InputStream           configurationFile;
+    private static final String   CONFIGURATION_FILE = "config/configuration.xml";
+    private File                  configurationFile;
     private List<DatabaseElement> connectionHistory;
     private List<String>          classPathEntries;
     private String                tagertProject;
@@ -39,8 +38,7 @@ public class Configuration {
     private List<TemplateElement> templates;
 
     public Configuration(){
-    	configurationFile=this.getClass().getResourceAsStream(CONFIGURATION_FILE);
-    	
+    	configurationFile=new File(CONFIGURATION_FILE);
         connectionHistory = new ArrayList<DatabaseElement>();
         classPathEntries = new ArrayList<String>();
         templates = new ArrayList<TemplateElement>();

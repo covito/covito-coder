@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<configuration>
+    <classpath>
+        <entry>driver/ojdbc14.jar</entry>
+        <entry>driver/sqljdbc4.jar</entry>
+        <entry>driver/mysql-connector-java-5.1.33.jar</entry>
+        <entry>driver/postgresql-9.3-1102-jdbc41.jar</entry>
+    </classpath>
+    <connections>
+        <database name="Test">
+            <driverClass>com.mysql.jdbc.Driver</driverClass>
+            <url>jdbc:mysql://localhost:3306/testdb</url>
+            <username>root</username>
+            <password></password>
+            <schema/>
+        </database>
+    </connections>
+    <tagertProject>D:\temp</tagertProject>
+    <basePackage>org.joy</basePackage>
+    <moduleName>test</moduleName>
+    <templates>
+        <template engine="freemarker" name="实体类" selected="true">
+            <templateFile>entity.ftl</templateFile>
+            <targetPath>${tagertProject}\src\${basePackage}\${moduleName}\entity\</targetPath>
+            <targetFileName>${table.className}.java</targetFileName>
+            <encoding>UTF-8</encoding>
+        </template>
+        <template engine="velocity" name="实体类" selected="false">
+            <templateFile>entity.vm</templateFile>
+            <targetPath>${tagertProject}\\src\\${basePackage}\\${moduleName}\\entity\\</targetPath>
+            <targetFileName>${table.className}.java</targetFileName>
+            <encoding>UTF-8</encoding>
+        </template>
+    </templates>
+</configuration>

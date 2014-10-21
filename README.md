@@ -9,8 +9,8 @@ Covito-coder
     <?xml version="1.0" encoding="utf-8" standalone="no"?>
     <configuration>
         <classpath>
-            <!-- 引入JDBC驱动，手动添加 -->
-            <entry>lib/mysql-connector-java-3.1.7-bin.jar</entry>
+            <!-- 引入JDBC驱动，系统自带之外的可自己手动添加 -->
+            <entry>driver/ojdbc14.jar</entry>
         </classpath>
         <!-- 代码生成目标基准目录 -->
         <tagertProject>D:\temp</tagertProject>

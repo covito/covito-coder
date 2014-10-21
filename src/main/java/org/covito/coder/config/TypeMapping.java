@@ -1,7 +1,7 @@
 package org.covito.coder.config;
 
+import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -24,15 +24,15 @@ import org.xml.sax.SAXException;
 
 public class TypeMapping {
 
-    private static final String  MAPING_FILE = "/TypeMapping.xml";
+    private static final String  MAPING_FILE = "config/TypeMapping.xml";
 
-    private InputStream          mappginFile;
+    private File          mappginFile;
 
     private Map<Integer, String> typeMap;
     private Map<Integer, String> fullTypeMap;
 
     public TypeMapping(){
-        this.mappginFile = getClass().getResourceAsStream(MAPING_FILE);
+        this.mappginFile = new File(MAPING_FILE);
         typeMap = new HashMap<Integer, String>();
         fullTypeMap = new HashMap<Integer, String>();
     }

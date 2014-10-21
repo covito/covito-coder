@@ -8,11 +8,11 @@ public class EngineBuilder {
 
     private Map<String, TemplateEngine> engineMap;
 
-    public EngineBuilder(String classPath) {
+    public EngineBuilder() {
         engineMap = new HashMap<String, TemplateEngine>();
         synchronized (this) {
-            engineMap.put("freemarker", new FreeMarkerImpl(classPath));
-            engineMap.put("velocity", new VelocityImpl(classPath));
+            engineMap.put("freemarker", new FreeMarkerImpl());
+            engineMap.put("velocity", new VelocityImpl());
         }
     }
 

@@ -160,7 +160,7 @@ public class GenerationDialog extends JDialog {
         centerScreen();
         loadConfiguration();
 
-        engineBuilder = new EngineBuilder(classPath);
+        engineBuilder = new EngineBuilder();
     }
 
     public void centerScreen() {
