@@ -49,6 +49,7 @@ import javax.swing.tree.DefaultTreeCellRenderer;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
 
+import org.covito.coder.CoderHepler;
 import org.covito.coder.config.Configuration;
 import org.covito.coder.config.TypeMapping;
 import org.covito.coder.config.model.DatabaseElement;
@@ -80,9 +81,9 @@ public class Generator extends JFrame {
     private DefaultMutableTreeNode tablesNode;
     private DefaultMutableTreeNode viewsNode;
 
-    private ImageIcon              folderIcon       = createImageIcon("icon/folder.png");
-    private ImageIcon              tableIcon        = createImageIcon("icon/table.png");
-    private ImageIcon              viewIcon         = createImageIcon("icon/view.png");
+    private ImageIcon              folderIcon       = createImageIcon("./icon/folder.png");
+    private ImageIcon              tableIcon        = createImageIcon("./icon/table.png");
+    private ImageIcon              viewIcon         = createImageIcon("./icon/view.png");
 
     private JPopupMenu             tablesTreePopupMenu;
     private JMenuItem              mntmTableInfo;
@@ -147,6 +148,7 @@ public class Generator extends JFrame {
         });
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 886, 566);
+        setTitle("Code Generator GUI");
 
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
@@ -356,7 +358,7 @@ public class Generator extends JFrame {
         if (imgURL != null) {
             return new ImageIcon(imgURL);
         } else {
-            System.err.println("Couldn't find file: " + path);
+            CoderHepler.logger.error("Couldn't find file: " + path);
             return null;
         }
     }

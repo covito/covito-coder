@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.covito</groupId>
 	<artifactId>covito-coder</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 
 	<properties>
 		<slf4j.version>1.7.6</slf4j.version>
@@ -55,6 +55,15 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+					<include>**/*.png</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<!-- Compiler 插件, 设定JDK版本 -->
 			<plugin>
@@ -78,6 +87,7 @@
 					<wtpversion>2.0</wtpversion>
 					<sourceIncludes>
 						<sourceInclude>**/*.xml</sourceInclude>
+						<sourceInclude>**/*.png</sourceInclude>
 					</sourceIncludes>
 					<additionalConfig>
 						<file>
