@@ -26,7 +26,7 @@ public class FreeMarkerImpl implements TemplateEngine {
     public void initConfiguration() {
         try {
             config = new Configuration();
-            config.setDirectoryForTemplateLoading(new File("templates/freemarker"));
+            config.setDirectoryForTemplateLoading(new File("templates/"));
             config.setObjectWrapper(new DefaultObjectWrapper());
 
             config.setSetting("classic_compatible", "true");

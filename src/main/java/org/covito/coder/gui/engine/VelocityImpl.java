@@ -28,7 +28,7 @@ public class VelocityImpl implements TemplateEngine {
         props.setProperty(Velocity.OUTPUT_ENCODING, "UTF-8");// 设置输出字符集
         props.setProperty(Velocity.ENCODING_DEFAULT, "UTF-8");
         props.setProperty(RuntimeConstants.RUNTIME_LOG_LOGSYSTEM_CLASS, NullLogChute.class.getName());
-        props.setProperty(Velocity.FILE_RESOURCE_LOADER_PATH, "templates/velocity");
+        props.setProperty(Velocity.FILE_RESOURCE_LOADER_PATH, "templates/");
         engine.init(props);
     }
 

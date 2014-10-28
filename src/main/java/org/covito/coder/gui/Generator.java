@@ -81,9 +81,9 @@ public class Generator extends JFrame {
     private DefaultMutableTreeNode tablesNode;
     private DefaultMutableTreeNode viewsNode;
 
-    private ImageIcon              folderIcon       = createImageIcon("./icon/folder.png");
-    private ImageIcon              tableIcon        = createImageIcon("./icon/table.png");
-    private ImageIcon              viewIcon         = createImageIcon("./icon/view.png");
+    private ImageIcon              folderIcon       = createImageIcon("icon/folder.png");
+    private ImageIcon              tableIcon        = createImageIcon("icon/table.png");
+    private ImageIcon              viewIcon         = createImageIcon("icon/view.png");
 
     private JPopupMenu             tablesTreePopupMenu;
     private JMenuItem              mntmTableInfo;
