@@ -3,23 +3,9 @@ package org.covito.coder.util;
 import java.io.File;
 import java.util.Locale;
 
-public class StringUtil {
+import org.apache.commons.lang.StringUtils;
 
-    public static boolean isEmpty(String value) {
-        return value == null || value.trim().length() == 0;
-    }
-
-    public static boolean isBlank(String value) {
-        return value == null || value.trim().length() == 0;
-    }
-
-    public static boolean isNotEmpty(String value) {
-        return value != null && value.trim().length() > 0;
-    }
-
-    public static boolean isNotBlank(String value) {
-        return value != null && value.trim().length() > 0;
-    }
+public class StringUtil extends StringUtils {
 
     public static String packagePathToFilePath(String packagepath) {
         String result = null;

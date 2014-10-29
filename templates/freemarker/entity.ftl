@@ -1,4 +1,4 @@
-<#include "copyright.ftl"/>
+<#include "freemarker/copyright.ftl"/>
 package ${basePackage}.${moduleName}.entity
 
 <#if (table.hasDateColumn)>
@@ -30,7 +30,7 @@ public class ${table.className} {
 
     /** ${column.columnName} - ${column.remarks} */
     <#if (column.isString())>
-    @Length(max=${column.length})
+    @Length(max=${column.size})
     </#if>
     <#if (!column.nullable)>
         <#if (column.isString())>
@@ -44,19 +44,19 @@ public class ${table.className} {
 
 <#list table.primaryKeys as key>
 
-    public ${key.javaType} ${key.getterMethodName}(){
+    public ${key.javaType} ${key.getterMethodCamelName}(){
         return this.${key.javaProperty};
     }
-    public void ${key.setterMethodName}(${key.javaType} ${key.javaProperty}){
+    public void ${key.setterMethodCamelName}(${key.javaType} ${key.javaProperty}){
         this.${key.javaProperty} = ${key.javaProperty};
     }
 </#list>
 <#list table.baseColumns as column>
 
-    public ${column.javaType} ${column.getterMethodName}(){
+    public ${column.javaType} ${column.getterMethodCamelName}(){
         return this.${column.javaProperty};
     }
-    public void ${column.setterMethodName}(${column.javaType} ${column.javaProperty}){
+    public void ${column.setterMethodCamelName}(${column.javaType} ${column.javaProperty}){
         this.${column.javaProperty} = ${column.javaProperty};
     }
 </#list>

@@ -184,7 +184,7 @@ public class Column implements java.io.Serializable, Cloneable {
         this.javaProperty = javaProperty;
     }
 
-    public String getGetterMethodName() {
+    public String getGetterMethodCamelName() {
         if (JavaTypeResolver.isBoolean(javaType)) {
             return "is" + StringUtil.getCamelCaseString(columnName, true);
         } else {
@@ -192,8 +192,20 @@ public class Column implements java.io.Serializable, Cloneable {
         }
     }
 
-    public String getSetterMethodName() {
+    public String getSetterMethodCamelName() {
         return "set" + StringUtil.getCamelCaseString(columnName, true);
+    }
+    
+    public String getGetterMethodName() {
+    	if (JavaTypeResolver.isBoolean(javaType)) {
+    		return "is" + StringUtil.capitalize(columnName);
+    	} else {
+    		return "get" + StringUtil.capitalize(columnName);
+    	}
+    }
+    
+    public String getSetterMethodName() {
+    	return "set" + StringUtil.capitalize(columnName);
     }
 
     public String getFullJavaType() {

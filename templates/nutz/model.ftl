@@ -27,35 +27,35 @@ public class ${table.className} {
     @Id
     </#if>
     @Column
-    private ${key.javaType} ${key.javaProperty};
+    private ${key.javaType} ${key.columnName};
 </#list>
 <#list table.baseColumns as column>
 
     /** ${column.remarks} */
     @Column
-    private ${column.javaType} ${column.javaProperty};
+    private ${column.javaType} ${column.columnName};
 </#list>
 
 <#list table.primaryKeys as key>
 	/** Get ${key.remarks} */
     public ${key.javaType} ${key.getterMethodName}(){
-        return this.${key.javaProperty};
+        return this.${key.columnName};
     }
     
     /** Set ${key.remarks} */
-    public void ${key.setterMethodName}(${key.javaType} ${key.javaProperty}){
-        this.${key.javaProperty} = ${key.javaProperty};
+    public void ${key.setterMethodName}(${key.javaType} ${key.columnName}){
+        this.${key.columnName} = ${key.columnName};
     }
 </#list>
 <#list table.baseColumns as column>
 	/** Get ${column.remarks} */
     public ${column.javaType} ${column.getterMethodName}(){
-        return this.${column.javaProperty};
+        return this.${column.columnName};
     }
     
     /** Set ${column.remarks} */
-    public void ${column.setterMethodName}(${column.javaType} ${column.javaProperty}){
-        this.${column.javaProperty} = ${column.javaProperty};
+    public void ${column.setterMethodName}(${column.javaType} ${column.columnName}){
+        this.${column.columnName} = ${column.columnName};
     }
 </#list>
 }

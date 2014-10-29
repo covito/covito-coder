@@ -63,39 +63,43 @@ Covito-coder
 
 ### column
 ####属性
-	String	columnName       字段名
+	String	columnName                字段名
 
-	boolean isPrimaryKey     是否为主键
+	boolean isPrimaryKey              是否为主键
 
-	boolean isForeignKey     是否为外键
+	boolean isForeignKey              是否为外键
 
-	int     size             字段长度
+	int     size                      字段长度
 
-	int     decimalDigits    小数位长度
+	int     decimalDigits             小数位长度
 
-	boolean nullable         是否可空
+	boolean nullable                  是否可空
 
-	boolean unique           是否唯一值
+	boolean unique                    是否唯一值
 
-	String  defaultValue     默认值
+	String  defaultValue              默认值
 
-	String  remarks          注释
+	String  remarks                   注释
 
-	String  remarksUnicode   数字转Unicode后的字符串
+	String  remarksUnicode            数字转Unicode后的字符串
 
-	int     jdbcType         对应 java.sql.Types
+	int     jdbcType                  对应 java.sql.Types
 
-	String  jdbcTypeName     对应jdbcType的名称
+	String  jdbcTypeName              对应jdbcType的名称
 
-	String  javaProperty     属性名
+	String  javaProperty              属性名
 
-	String  javaType         java类型，比如String
+	String  javaType                  java类型，比如String
 
-	String  fullJavaType     完整的Java类型，比如 java.lang.String
+	String  fullJavaType              完整的Java类型，比如 java.lang.String
 
-	String  getterMethodName Get方法名
+	String  getterMethodCamelName     Get方法名(驼峰命名)
 
-	String  setterMethodName Set方法名
+	String  setterMethodCamelName     Set方法名(驼峰命名)
+	
+	String  getterMethodName          Get方法名(非驼峰命名)
+
+	String  setterMethodName          Set方法名(非驼峰命名)
 
 ####方法
 	boolean isString()      是否是字符串

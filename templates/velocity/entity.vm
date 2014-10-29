@@ -25,10 +25,10 @@ public class ${table.className} {
 
 #foreach($column in $table.columns)
 
-    public ${column.javaType} ${column.getterMethodName}(){
+    public ${column.javaType} ${column.getterMethodCamelName}(){
         return this.${column.javaProperty};
     }
-    public void ${column.setterMethodName}(${column.javaType} ${column.javaProperty}){
+    public void ${column.setterMethodCamelName}(${column.javaType} ${column.javaProperty}){
         this.${column.javaProperty} = ${column.javaProperty};
     }
 #end
