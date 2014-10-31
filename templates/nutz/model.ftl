@@ -16,7 +16,7 @@ import org.nutz.dao.entity.annotation.*;
  *
  * @since ${.now}
  */
-@Table("${table.className}")
+@Table("${table.tableName}")
 public class ${table.className} {
 <#list table.primaryKeys as key>
 
